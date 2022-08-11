@@ -12,15 +12,23 @@ title {
 }
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
-    grid-gap: 5px;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 1px;
     font-family: "Courier New";
 }
 
 .card {
-width: 80px;
-
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
 }
 
 .front, .back {
@@ -35,7 +43,7 @@ width: 80px;
     z-index: 1;
     transform: rotateY(180deg);
 }
-.container:hover .card {
+.card:hover {
     transform: rotateY(180deg);
 }
 
