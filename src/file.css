@@ -1,0 +1,43 @@
+body {
+    background-image: url("usamap.jpg");
+    background-color: #cccccc;
+}
+
+h1 {
+    font-family: "Courier New";
+}
+title {
+    font-family: "Courier New";
+    font-weight: bold;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 5px;
+    font-family: "Courier New";
+}
+
+.card {
+width: 80px;
+
+}
+
+.front, .back {
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back{
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.container{
+}
